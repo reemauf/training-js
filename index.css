@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body {
+ height: 100vh;
+ width: 100%;
+}
+header {
+    height: 50vh;
+    text-align: center;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+header div {
+    width: 300px;
+    background-color: rgb(133, 130, 219);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5px;
+}
+main {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;  
+}
+.itemcount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.itemcount input {
+    width: 30px;
+}
+.itemcount button {
+    width: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.plus {
+    background-color: blue;
+}
+.minus{
+    background-color: red;
+  
+}
+.newproduct{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    
+
+}
