@@ -191,6 +191,38 @@ pluschange();
 minuschange();
 countchange();
 }
+let show =true;
+let icon1=document.getElementById("icon");
+icon1.addEventListener("click" ,hide);
+function hide(){
+   
+
+    let product=document.getElementById("pro");
+    if(show==true){
+    product.style.display="none";
+    
+}
+else {product.style.display="flex";}
+show = !show ;
+
+}
+let showcart=true;
+let carti=document.getElementById("carticon");
+carti.addEventListener("click",hidecart);
+function hidecart(){
+    let carts=document.getElementById("cart");
+    let cartcont1=document.getElementById("cartcount");
+    if(showcart==true){
+        carts.style.display="none";
+        cartcont1.innerHTML=cart.length;
+        
+    }
+    else{carts.style.display="flex";
+    cartcont1.innerHTML='';
+}
+    showcart=!showcart;
+
+}
 
 
 

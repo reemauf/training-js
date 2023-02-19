@@ -69,3 +69,14 @@ main div {
     
 
 }
+.icon {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+.icon i{
+    color: red;
+    font-size: 20px;
+    background-color: rgb(230, 224, 235);
+}
