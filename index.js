@@ -1,6 +1,6 @@
 let cart = [];
 
-
+let u;
 function loadbtns() {
 
     let btns = document.getElementsByName("add");
@@ -108,6 +108,17 @@ function diplaycart() {
         btn.innerHTML = "checkout";
         btn.onclick = function () {
             let addbilldiv = document.getElementById("bills");
+            let accountdiv=document.createElement("div");
+            let spanname=document.createElement("span");
+            spanname.innerHTML=u.name;
+            let spanphone=document.createElement("span");
+            spanphone.innerHTML=u.phone;
+            let spanaddress=document.createElement("span");
+            spanaddress.innerHTML=u.address;
+            accountdiv.appendChild(spanname);
+            accountdiv.appendChild(spanaddress);
+            accountdiv.appendChild(spanphone);
+            addbilldiv.appendChild(accountdiv);
             let divcheck = document.createElement("div");
             let total = document.createElement("span");
             total.innerHTML = alltotal + "$";
@@ -254,6 +265,9 @@ function hidecart() {
     showcart = !showcart;
 
 }
+
+
+
 let money = document.getElementById("moneyicon");
 money.addEventListener("click", hidebill);
 let showbill = true;
@@ -269,7 +283,27 @@ function hidebill() {
     showbill = !showbill;
 
 }
-
+let useri=document.getElementById("usericon");
+useri.addEventListener("click",hideuser);
+let showuser = true;
+function hideuser (){
+    let useinfo = document.getElementById("acount");
+    if(showuser == true){
+useinfo.style.display= "none";
+    }
+    else{
+        useinfo.style.display ="flex";
+    }
+    showuser = !showuser;
+}
+let sav=document.getElementById("saveinfo");
+sav.addEventListener("click",saveuser);
+function saveuser(){
+    let name1=document.getElementById("name").value;
+    let address1=document.getElementById("address").value;
+    let phone1=document.getElementById("phone").value;
+     u={name:name1,address:address1,phone:phone1};
+}
 
 
 
